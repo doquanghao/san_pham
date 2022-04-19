@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/trang_chu">
+
+    <fragment
+        android:id="@+id/trang_chu"
+        android:name="com.example.project_tra_sua.Home.Trang_chu.trang_chu"
+        android:label="fragment_trang_chu"
+        tools:layout="@layout/fragment_trang_chu" >
+        <action
+            android:id="@+id/action_trang_chu_to_ct_sp"
+            app:destination="@id/ct_sp"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popUpTo="@id/trang_chu"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/ct_sp"
+        android:name="com.example.project_tra_sua.Home.Trang_chu.ct_sp"
+        android:label="fragment_ct_sp"
+        tools:layout="@layout/fragment_ct_sp" />
+    <fragment
+        android:id="@+id/tai_khoan2"
+        android:name="com.example.project_tra_sua.Home.Tai_khoan.Tai_khoan"
+        android:label="fragment_tai_khoan"
+        tools:layout="@layout/fragment_tai_khoan" />
+    <fragment
+        android:id="@+id/gio_hang2"
+        android:name="com.example.project_tra_sua.Home.gio_hang.gio_hang"
+        android:label="fragment_gio_hang"
+        tools:layout="@layout/fragment_gio_hang" />
+</navigation>
